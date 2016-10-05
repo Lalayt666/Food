@@ -1,0 +1,54 @@
+.checkboxM {
+    padding: 20px;
+}
+
+body{
+background-color: #FFECAD;
+}
+li { 
+	color: red;
+    list-style-type: none;
+    /* Убираем маркеры */
+}
+
+ul {
+    margin-left: 10;
+    /* Отступ слева в браузере IE и Opera */
+    padding-left: 10;
+    /* Отступ слева в браузере Firefox, Safari, Chrome */
+}
+
+.N
+{
+	margin-left: 10px;
+}
+.divform{
+
+	background-color: #fff;
+}
+.row_1{
+	height: 20px;
+
+
+}
+
+.ow {
+height: 700px;
+
+
+/*  border-color: red;
+border-width: 2px;  */
+background-color: #fff;
+	
+}
+.bor{
+	border: solid 2px red;
+}
+
+.margin-icon{
+    margin:10px;
+}
+
+.th-center th{
+    text-align: center;
+}
