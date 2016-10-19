@@ -12,7 +12,7 @@
 
         function init() {
             fd1.fodlist = [{
-                image: 'qq',
+                image: 'client/content/image/tomat.png',
                 name: 'Помидор',
                 description: 'Плоды томата отличаются высокими питательными вкусовыми и диетическими качествами',
                 chek: '1'
