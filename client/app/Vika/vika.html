@@ -1,0 +1,136 @@
+<div class="ow">
+    <div class="row_1"></div>
+    <div class="row">
+        <div class="col-lg-4 col-sm-4" style="margin-left:40px; width:300px;">
+        </div>
+        <h1 align="center">Раздельное питание</h1>
+        <div class="col-lg-4 col-sm-4" style="width:250px;">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-cog margin-icon" aria-hidden="true"></span>Действия <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#"><span class="glyphicon glyphicon-plus margin-icon" aria-hidden="true"></span>Добавить</a></li>
+                                    <li><a href="#"><span class="glyphicon glyphicon-minus margin-icon" aria-hidden="true"></span>Удалить</a></li>
+                                    <li><a href="#"><span class="glyphicon glyphicon-pencil margin-icon" aria-hidden="true"></span>Редактировать</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#"><span class="glyphicon glyphicon-sort margin-icon" aria-hidden="true"></span>Сортировка</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#"><span class="glyphicon glyphicon-filter margin-icon" aria-hidden="true"></span>Фильтр</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <button type="submit" class="btn btn-success">Сохранить</button>
+            <button type="default" class="btn btn-success">Отмена</button>
+        </div>
+        <div class="col-lg-4 col-sm-4 text-center margin_leftawidth" ng-controller="Foo as fo">
+            <table class="table table-bordered th-center">
+                <thead>
+                    <tr class="active" style="height:70px;">
+                        <th>
+                            <br>Изображение</th>
+                        <th>
+                            <br>Название</th>
+                        <th>
+                            <br>Описание</th>
+                        <th>
+                            <br>Выбор</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="row in fo.fodlist">
+                        <td><span ng-bind="row.image"></span></td>
+                        <td><span ng-bind="row.name"></span></td>
+                        <td><span ng-bind="row.description"></span></td>
+                        <td><span ng-bind="row.chek"></span></td>
+                    </tr>
+                </tbody>
+                <!-- <tbody>
+                    <tr>
+                        <td colspan="2">
+                            <img src="tomat.png" alt="tomat" class="img-thumbnail" style="width:70px; height:70px; "></td>
+                        <td>Помидор</td>
+                        <td>Плоды томата отличаются высокими питательными, вкусовыми и диетическими качествами.</td>
+                        <td>
+                            <input type="checkbox" aria-label="...">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <img src="tomat.png" alt="tomat" class="img-thumbnail" style="width:70px; height:70px; "></td>
+                        <td>Огурец</td>
+                        <td>Огурцы богаты сложными органическими веществами, которые играют важную роль в обмене веществ.</td>
+                        <td>
+                            <input type="checkbox" aria-label="...">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <img src="tomat.png" alt="tomat" class="img-thumbnail" style="width:70px; height:70px; ">
+                        </td>
+                        <td>Шампиньены</td>
+                        <td>В пищевых шампиньонах содержатся 20 аминокислот, в том числе все незаменимые для человека.</td>
+                        <td>
+                            <input type="checkbox" aria-label="...">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <img src="tomat.png" alt="tomat" class="img-thumbnail" style="width:70px; height:70px; ">
+                        </td>
+                        <td>Редис</td>
+                        <td>Содержит ряд необходимых человеку витаминов, нужных человеку для восстанавления иммунитета.</td>
+                        <td>
+                            <input type="checkbox" aria-label="...">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <img src="tomat.png" alt="tomat" class="img-thumbnail" style="width:70px; height:70px; ">
+                        </td>
+                        <td>Арбуз</td>
+                        <td>Соли железа, калия, натрия, фосфора, магния, содержащиеся в мякоти арбуза, благотворно влияют на деятельность органов кроветворения, пищеварения, сердечно-сосудистой системы, желёз внутренней секреции.</td>
+                        <td>
+                            <input type="checkbox" aria-label="...">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <button type="button" class="btn btn-success">Количество</button>
+                        </td>
+                        <td>
+                            <div style="margin-left:20px;">
+                                <input type="text" class="form-control" id="formGroupInputSmall" placeholder="Количество" style="width:100px;">
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>-->
+            </table>
+        </div>
+        <div class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Modal title</h4>
+                    </div>
+                    <div class="modal-body">
+                    <p>jkjlk</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+    </div>
+</div>

@@ -2,11 +2,12 @@
     padding: 20px;
 }
 
-body{
-background-color: #FFECAD;
+body {
+    background-color: #FFECAD;
 }
-li { 
-	color: red;
+
+li {
+    color: red;
     list-style-type: none;
     /* Убираем маркеры */
 }
@@ -18,37 +19,80 @@ ul {
     /* Отступ слева в браузере Firefox, Safari, Chrome */
 }
 
-.N
-{
-	margin-left: 10px;
+.N {
+    margin-left: 10px;
 }
-.divform{
 
-	background-color: #fff;
+.divform {
+    background-color: #fff;
 }
-.row_1{
-	height: 20px;
 
-
+.row_1 {
+    height: 20px;
 }
 
 .ow {
-height: 700px;
-
-
-/*  border-color: red;
+    height: 700px;
+    /*  border-color: red;
 border-width: 2px;  */
-background-color: #fff;
-	
-}
-.bor{
-	border: solid 2px red;
+    background-color: #fff;
 }
 
-.margin-icon{
-    margin:10px;
+.bor {
+    border: solid 2px red;
 }
 
-.th-center th{
+.margin-icon {
+    margin: 10px;
+}
+
+.th-center th {
     text-align: center;
+}
+
+.marg_top {
+    margin-top: 15px;
+}
+
+.marg_leftawidth {
+    margin-left: 40px;
+    width: 400px;
+}
+
+.margin_leftawidth_small {
+    margin-left: 40px;
+    width: 300px;
+}
+
+.tr_ht {
+    height: 70px;
+    text-align: center;
+}
+
+.td_one {
+    text-align: left;
+    column-span: 2;
+}
+.td_two{
+    text-align: center;
+}
+
+.width_div_col {
+    width: 100px;
+}
+
+.width_div_col_l {
+    width: 250px;
+}
+
+.margin_l_tw {
+    margin-left: 20px;
+
+}
+.tr_bottom{
+    
+}
+.margin_l_center {
+    margin-left: 650px;
+    
 }
