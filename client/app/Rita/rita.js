@@ -1,18 +1,29 @@
 (function() {
-varmoduleId = "Summ";
-angular.module("comeApp").controller(moduleId, [Summ]);
+    var moduleId = "Food";
+    angular.module("super_food").controller(moduleId, [Food]);
 
-functionSumm() {
-varsm = this;
-sm.items = [];
+    function Food() {
 
-init();
+        var fd = this;
 
-functioninit() {
-            sm.items = [	{kkal:255}, 
-{kkal:333},{kkal:25}];
+        fd.foodlist = [];
+
+        init();
+
+        function init() {
+            fd.foodlist = [{
+                name: 'Курица отварная',
+                kkal: 225
+            }, {
+                name: 'Томаты',
+                kkal: 40
+            }, {
+                name: 'Огурец',
+                kkal: 0.5
+            }];
         }
     }
-	
-})(); 
+})();
+  
 
+   
