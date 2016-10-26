@@ -8,6 +8,11 @@
 
         fd.foodlist = [];
 
+        fd.colortext=colortext;
+        
+
+       
+
         init();
 
         function init() {
@@ -19,9 +24,19 @@
                 kkal: 40
             }, {
                 name: 'Огурец',
-                kkal: 0.5
+                kkal: 0
             }];
         }
+
+        function colortext(row) {
+            if(row.kkal==225) return "normal";
+            if (row.kkal==0) return "low";
+            if (row.kkal>=40) return "low";
+
+
+        }
+
+      
     }
 })();
   
