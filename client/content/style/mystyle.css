@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: #FFECAD;
+    background-color: #fff;
 }
 
 li {
@@ -97,12 +97,10 @@ border-width: 2px;  */
     
 }
 .low{
-    color: red;
+    color: green;
+    font-weight: bold;
 
 }
 .normal{
     color:black;
-}
-.low1{
-    color:#fff;
 }

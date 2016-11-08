@@ -9,6 +9,7 @@
         <div class="row">
             <div class="col-lg-3 col-sm-3 margin_leftawidth_small">
                 <img src="client/content/image/tomat.png" alt="tomat" class="img-thumbnail">
+
                 <div>
                     <br>
                     <br>
@@ -16,54 +17,72 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, consequuntur natus? Consequatur saepe quis, delectus aut nostrum dolores fugiat consectetur? Exercitationem, odio. Hic dignissimos vel, aut officiis eligendi, sed veniam.</p>
                 </div>
             </div>
-            <div class="col-lg-4 col-sm-4  margin_leftawidth" ng-controller="Food as f">
+            <div class="col-lg-4 col-sm-4  margin_leftawidth" ng-controller="FoodController as f">
                 <table class="table table-bordered th-center">
                     <thead>
                         <tr class="active tr_ht">
                             <th class="td_one">
-                                <br>Продукт (100г.)</th>
+                                <br>Продукт (100г.)</br>
+                            </th>
                             <th>
-                                <br>Килокалории</th>
+                                <br>Килокалории</br>
+                            </th>
+                            <th>
+                                <br> </br>
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr ng-repeat="row in f.foodlist" >
-                            <td ><span ng-bind="row.name" ></span></td>
-                            <td><span ng-bind="row.kkal" ng-class="f.colortext(row)"></span></td>
+                        <tr ng-repeat="row in f.foodList">
+                            <td><span ng-bind="row.name"></span></td>
+                            <td><span ng-bind="row.kkal" ng-class="{'low': row.checkK}"></span></td>
+                            <td><input type="checkbox" ng-model="row.checkK"></td>
                         </tr>
+                        <tr ng-if="f.isViewEditing">
+                            <td><input type="text" class="form-control" ng-model="f.editedFood.name"></td>
+                            <td><input type="text" class="form-control" ng-model="f.editedFood.kkal"></td>
+                            <td><input type="checkbox" ng-model="f.editedFood.checkK"></td></td>
+                        </tr>   
+
                     </tbody>
-                   
                 </table>
-                <div class="">
-                    <button type="button" class="btn btn-success" style="position:absolute; right:205px;">Summ</button>
-                    <div></div>
-                    <input type="text" class="form-control" id="formGroupInputSmall" placeholder="Summ" style="position:block; width:100px; ">
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-4 width_div_col_l">
+               
+
+                
+                    <button type="button" class="btn btn-success">Summ</button>
+                    
+                
+            
+
+            <div class="col-lg-5 col-sm-5 width_div_col_l">
                 <nav class="navbar navbar-default">
                     <div class="container-fluid">
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav">
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-cog margin-icon" aria-hidden="true"></span>Действия <span class="caret"></span></a>
+                                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-cog margin-icon" aria-hidden="true"></span>Действия <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#"><span class="glyphicon glyphicon-plus margin-icon" aria-hidden="true"></span>Добавить</a></li>
-                                        <li><a href="#"><span class="glyphicon glyphicon-minus margin-icon" aria-hidden="true"></span>Удалить</a></li>
-                                        <li><a href="#"><span class="glyphicon glyphicon-pencil margin-icon" aria-hidden="true"></span>Редактировать</a></li>
+
+                                        <li ><a href=""  ng-click="f.add()"><span class="glyphicon glyphicon-plus margin-icon" aria-hidden="true"></span>Добавить</a></li>
+
+                                        <li><a href="" ng-click='f.edit()'><span class="glyphicon glyphicon-pencil margin-icon" aria-hidden="true"></span>Редактировать</a></li>
+
                                         <li role="separator" class="divider"></li>
-                                        <li><a href="#"><span class="glyphicon glyphicon-sort margin-icon" aria-hidden="true"></span>Сортировка</a></li>
+                                        <li><a href=""><span class="glyphicon glyphicon-sort margin-icon" aria-hidden="true"></span>Сортировка</a></li>
+
                                         <li role="separator" class="divider"></li>
-                                        <li><a href="#"><span class="glyphicon glyphicon-filter margin-icon" aria-hidden="true"></span>Фильтр</a></li>
+                                        <li><a href=""><span class="glyphicon glyphicon-filter margin-icon" aria-hidden="true"></span>Фильтр</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </nav>
-                <button type="submit" class="btn btn-success">Сохранить</button>
-                <button type="default" class="btn btn-success">Отмена</button>
+                <button type="text" class="btn btn-success" ng-click='f.save()'>Сохранить</button>
+                <button type="default" class="btn btn-success" ng-click='f.remove()' ng-if='f.isViewEditing'>Отмена</button>
+               
             </div>
         </div>
     </div>
+</div>
 </div>

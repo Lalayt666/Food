@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--| 
 Активация приложения с помощью нестандартного атрибута ngApp                                            | 2
-                                                                                                        |-->
+|-->
 <html ng-app="super_food">
 
 <head>
@@ -12,23 +12,22 @@
 </head>
 
 <body>
-
     <!--| 
     Инициализация переменной templateUrl значением, содержащим путь к представлению "Питание",          | 4
     с помощью нестандартного атрибута ngInit                                                            |-->
-    <div class="card" ng-init="templateUrl='client/app/Rita/rita.html'">
+    <div class="card">
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header" >
-                   <span class="glyphicon glyphicon-leaf margin-icon marg_top" aria-hidden="true"></span>
+                <div class="navbar-header">
+                    <span class="glyphicon glyphicon-leaf margin-icon marg_top" aria-hidden="true"></span>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li ><a href="#" ng-class="{active: templateUrl == 'client/app/Vika/vika.html'}" ng-click="templateUrl='client/app/Vika/vika.html'">Авторизация</a></li>
-                        <li class="active"><a href="#" ng-class="{active: templateUrl == 'client/app/Rita/rita.html'}" ng-click="templateUrl = 'client/app/Rita/rita.html'">Библиотека</a></li>
-                        <li><a href="#" ng-class="{active: templateUrl == 'client/app/Valya/valya.html'}" ng-click="templateUrl = 'client/app/Valya/valya.html'">Меню</a></li>
+                        <li><a href="#/avtoriz">Авторизация</a></li>
+                        <li class="active"><a href="#/library">Библиотека</a></li>
+                        <li><a href="#/menu">Меню</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -36,22 +35,17 @@
             <!-- /.container-fluid -->
         </nav>
     </div>
-    <div class="content-wrap">
-    <div class="container">
-        <!--| 
-        Вставка в тэга div с помощью нестандартного атрибута ngInit фрагмента разметки,                 | 5
-        вынесенного отдельный HTML-файл, путь к которому хранится в переменной templateUrl              |-->
-        <div class="card" ng-include="templateUrl"></div>
-        </div>
-    </div>
-    <!--|
-    Вставка в тэга div фрагмента разметку, вынесенного в файл client/app/layout/footer.html,            | 3
-    с помощью нестандартного атрибута ngInclude                                                         |-->
-    <div class="site-footer" ng-include="'client/app/layout/footer.html'"></div>
+    <div class="container"><div ng-view></div></div>
+    
+    
+    
+    
+  
     <!--|
     Подключение фреймворка AngularJS. *.js                                                              | 1
-                                                                                                        |-->
+    |-->
     <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="client/app.js"></script>

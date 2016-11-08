@@ -10,15 +10,15 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-cog margin-icon" aria-hidden="true"></span>Действия <span class="caret"></span></a>
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-cog margin-icon" aria-hidden="true"></span>Действия <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#"><span class="glyphicon glyphicon-plus margin-icon" aria-hidden="true"></span>Добавить</a></li>
-                                    <li><a href="#"><span class="glyphicon glyphicon-minus margin-icon" aria-hidden="true"></span>Удалить</a></li>
-                                    <li><a href="#"><span class="glyphicon glyphicon-pencil margin-icon" aria-hidden="true"></span>Редактировать</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-plus margin-icon" aria-hidden="true"></span>Добавить</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-minus margin-icon" aria-hidden="true"></span>Удалить</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-pencil margin-icon" aria-hidden="true"></span>Редактировать</a></li>
                                     <li role="separator" class="divider"></li>
-                                    <li><a href="#"><span class="glyphicon glyphicon-sort margin-icon" aria-hidden="true"></span>Сортировка</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-sort margin-icon" aria-hidden="true"></span>Сортировка</a></li>
                                     <li role="separator" class="divider"></li>
-                                    <li><a href="#"><span class="glyphicon glyphicon-filter margin-icon" aria-hidden="true"></span>Фильтр</a></li>
+                                    <li><a href=""><span class="glyphicon glyphicon-filter margin-icon" aria-hidden="true"></span>Фильтр</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -29,9 +29,6 @@
             <button type="default" class="btn btn-success">Отмена</button>
         </div>
         <div class="col-lg-4 col-sm-4 text-center margin_leftawidth" ng-controller="Foo as fo">
-         <!--   <div ng-src="fo.fodlist.image">
-             
-          </div> -->
             <table class="table table-bordered th-center">
                 <thead>
                     <tr class="active" style="height:70px;">
@@ -47,91 +44,33 @@
                 </thead>
                 <tbody>
                     <tr ng-repeat="row in fo.fodlist">
-                        <td><img style="width:70px; height:70px;" ng-src="{{row.image}}" alt=""></td>
+                        <td>
+                            <a href="#/library"><img style="width:70px; height:70px;" ng-src="{{row.image}}" alt=""></a>
+                        </td>
                         <td><span ng-bind="row.name"></span></td>
                         <td><span ng-bind="row.description"></span></td>
-                        <td> <input type="checkbox" aria-label="..."><span ng-bind="row.chek"></span></td>
+                        <td>
+                            <input type="checkbox" aria-label="..."><span ng-bind="row.chek"></span></td>
                     </tr>
                 </tbody>
-                <!-- <tbody>
-                    <tr>
-                        <td colspan="2">
-                            <img src="tomat.png" alt="tomat" class="img-thumbnail" style="width:70px; height:70px; "></td>
-                        <td>Помидор</td>
-                        <td>Плоды томата отличаются высокими питательными, вкусовыми и диетическими качествами.</td>
-                        <td>
-                            <input type="checkbox" aria-label="...">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <img src="tomat.png" alt="tomat" class="img-thumbnail" style="width:70px; height:70px; "></td>
-                        <td>Огурец</td>
-                        <td>Огурцы богаты сложными органическими веществами, которые играют важную роль в обмене веществ.</td>
-                        <td>
-                            <input type="checkbox" aria-label="...">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <img src="tomat.png" alt="tomat" class="img-thumbnail" style="width:70px; height:70px; ">
-                        </td>
-                        <td>Шампиньены</td>
-                        <td>В пищевых шампиньонах содержатся 20 аминокислот, в том числе все незаменимые для человека.</td>
-                        <td>
-                            <input type="checkbox" aria-label="...">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <img src="tomat.png" alt="tomat" class="img-thumbnail" style="width:70px; height:70px; ">
-                        </td>
-                        <td>Редис</td>
-                        <td>Содержит ряд необходимых человеку витаминов, нужных человеку для восстанавления иммунитета.</td>
-                        <td>
-                            <input type="checkbox" aria-label="...">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <img src="tomat.png" alt="tomat" class="img-thumbnail" style="width:70px; height:70px; ">
-                        </td>
-                        <td>Арбуз</td>
-                        <td>Соли железа, калия, натрия, фосфора, магния, содержащиеся в мякоти арбуза, благотворно влияют на деятельность органов кроветворения, пищеварения, сердечно-сосудистой системы, желёз внутренней секреции.</td>
-                        <td>
-                            <input type="checkbox" aria-label="...">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <button type="button" class="btn btn-success">Количество</button>
-                        </td>
-                        <td>
-                            <div style="margin-left:20px;">
-                                <input type="text" class="form-control" id="formGroupInputSmall" placeholder="Количество" style="width:100px;">
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>-->
             </table>
         </div>
-
         <!-- Small modal -->
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
         <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
             <div class="modal-dialog modal-sm" role="document">
                 <div class="modal-content">
-                <div class="panel panel-success">
-                    <div class="input-group input-group-sm">
-  <span class="input-group-addon" id="sizing-addon3">@</span>
-  <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon3">
-</div>
-<div class="input-group input-group-sm">
-  <span class="input-group-addon" id="sizing-addon3">@</span>
-  <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon3">
-</div>
+                    <div class="panel panel-success">
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon" id="sizing-addon3"></span>
+                            <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon3">
+                        </div>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon" id="sizing-addon3"></span>
+                            <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon3">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>

@@ -1,44 +1,80 @@
 (function() {
-    var moduleId = "Food";
+    var moduleId = "FoodController";
     angular.module("super_food").controller(moduleId, [Food]);
 
     function Food() {
 
         var fd = this;
 
-        fd.foodlist = [];
+        fd.foodList = [];
 
-        fd.colortext=colortext;
-        
 
+
+
+        fd.isViewEditing = false;
+        fd.editedFood = null;
+
+        fd.edit = edit;
+        fd.remove = remove;
+        fd.cancel = cancel;
+        fd.save = save;
+        fd.add = add;
        
+
 
         init();
 
         function init() {
-            fd.foodlist = [{
+            fd.foodList = [{
                 name: 'Курица отварная',
-                kkal: 225
+                kkal: 225,
+                checkK: false
             }, {
                 name: 'Томаты',
-                kkal: 40
+                kkal: 40,
+                checkK: false
             }, {
                 name: 'Огурец',
-                kkal: 0
+                kkal: 10,
+                checkK: false
             }];
         }
 
-        function colortext(row) {
-            if(row.kkal==225) return "normal";
-            if (row.kkal==0) return "low";
-            if (row.kkal>=40) return "low";
+        function temp() {
+            console.log('hello world!');
+        }
 
+
+        function add() {
+            console.log("Разработка add");
+            fd.isViewEditing = true;
+            fd.editedFood = { name: ' ', kkal: ' ', checkK: false };
 
         }
 
-      
+        function edit(item) {
+            console.log('Разработка edit');
+
+        }
+
+        function remove() {
+            console.log('Разработка remove');
+            fd.isViewEditing = false;
+            fd.editedFood = null;
+        }
+
+        function cancel(item) {
+            console.log('Разработка cancel');
+            
+        }
+
+        function save(item) {
+            console.log('Разработка save');
+        }
+
+
+
+
+
     }
 })();
-  
-
-   
