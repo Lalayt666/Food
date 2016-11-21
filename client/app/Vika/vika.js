@@ -12,26 +12,32 @@
 
         function init() {
             fd1.fodlist = [{
-                image: 'client/content/image/tomat.png',
+                id:1,
+                image: 'client/content/image/1.png',
                 name: 'Помидор',
                 description: 'Плоды томата отличаются высокими питательными вкусовыми и диетическими качествами',
-                chek: '1'
+                
             }, {
-                image: 'sss',
+                id:2,
+                image: 'client/content/image/2.png',
                 name: 'Огурец',
                 description: 'Огурцы богаты сложными органическими веществами которые играют важную роль в обмене веществ',
-                chek: '1'
+                
             }, {
-                image: 'qqq',
+                id:3,
+                image: 'client/content/image/tomat.png',
                 name: 'Шампиньон',
                 description: 'В пищевых шампиньонах содержатся 20 аминокислот в том числе все незаменимые для человека',
-                chek: '1'
+                
             }, {
-                image: 'qqq',
+                id:4,
+                image: 'client/content/image/tomat.png',
                 name: 'Редис',
                 description: 'Содержит ряд необходимых человеку витаминов нужных человеку для восстанавления иммунитета',
-                chek: '1'
+                
             }];
         }
+
+
     }
 })();

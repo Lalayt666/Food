@@ -42,7 +42,7 @@
                 <tr ng-repeat="row in m.menulist">
                     <td><span ng-bind="row.name"></span></td>
                     <td><span ng-bind="row.description"></span></td>
-                    <td ng-class="m.stylealign"><input type="checkbox" aria-label="..."></td>
+                    <td ng-class="m.stylealign"><input type="checkbox" ng-model="row.ck"></td>
                 </tr>
             </tbody>
         </table>

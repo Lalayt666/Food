@@ -1,9 +1,10 @@
 angular.module("super_food", ["ngRoute"]).config(
     function($routeProvider) {
-        $routeProvider.when('/library', {
-            templateUrl: 'client/app/Rita/rita.html',
+        $routeProvider.when('/library/:idFood', {
+            templateUrl: 'client/app/Library/foodList.html',
             controller: 'FoodController'
         });
+        
         $routeProvider.when('/avtoriz', {
             templateUrl: 'client/app/Vika/vika.html',
             controller: 'Foo'
@@ -13,6 +14,9 @@ angular.module("super_food", ["ngRoute"]).config(
             controller: 'Menu'
         });
         $routeProvider.otherwise({
-            redirectTo: '/library'
+            redirectTo: '/avtoriz'
         });
+
+        
+
     });

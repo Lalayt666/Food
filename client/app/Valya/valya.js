@@ -14,17 +14,19 @@
     	function init() {
     		mn.menulist = [{
                 name: 'Помидор',
-                description: 'Совместим с овощами и фруктами'
-                
+                description: 'Совместим с овощами и фруктами',
+                ck:true
             
             },{
                 name: 'Огурец',
-                description: 'Совместим с овощами и фруктами'
-                
+                description: 'Совместим с овощами и фруктами',
+                ck:true
+            
             },{
                 name: 'Курица',
-                description: 'Совместим с блаблабла'
-                
+                description: 'Совместим с блаблабла',
+                ck:true
+            
             }]
     	}
         
